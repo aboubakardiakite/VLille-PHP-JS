@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', ()=>{
       // 1 : création
-  let maCarte = L.map('carte_velo');
+  let maCarte = L.map('map');
   
       // 2 : choix du fond de carte
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -24,8 +24,10 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 );
 
+/*
 var initialiser = function(reponse){
         var etat = reponse["fields"]["etat"];
         var 
     
 }
+*/
