@@ -1,5 +1,21 @@
 #map{
-  		width: 400px;
-  		height: 400px;
+  		width: 700px;
+  		height: 700px;
+  		padding-top: 65px;
+  		
  }
  
+ #station{
+ 	list-style: none;
+
+ }
+
+ ul li{
+ 	background-color: red;
+ 	border: 2px solid black;
+ }
+
+ div#listestations{
+ 	   float: left;
+ }
+

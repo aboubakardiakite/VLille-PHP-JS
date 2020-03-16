@@ -12,9 +12,10 @@
 <body>
     <div id="conteneur">
         <pre>
-        <div class="listestations">
+        <div id="listestations">
             <?php echo displayStationsList();?>
         </div>
+        </pre>
         <div id="map"></div>
     </div>
     <script src="fichierJS.js"></script>

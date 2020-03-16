@@ -2,23 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Accueil</title>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" crossorigin=""/>
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" crossorigin=""></script>
+	<title>Formulaire</title>
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="fichierjS.js"></script>
 </head>
 <body>
-		<header>
-			<h1>V'ABIDJAN</h1>
-		</header>
-		<nav>
-			<a href="">Itenéraires et horaires</a>
-			<a href="#">Tarif</a>
-			<a href="#">Qui somme-nous?</a>
-		</nav>
-		<section>
-			<form name="ChercheVelo" method="get">
+		
+		<section id="formulaire">
+			<form name="ChercheVelo" action="fonctions.php"  method="get">
 				<fieldset>
 					<legend>Une nouvelle recherche</legend>
 						<label for="nom" style="vertical-align: middle">Nom:</label>
@@ -33,10 +25,12 @@
 							<option value="service">En service</option>
 							<option value="hors_service">Hors service</option>
 							<option value="toutes">Toutes</option>
-						  </select>
+						</select>
 						
 				</fieldset>
-				
+				<div id="validation">
+			<button type="submit" name="valid" value="ok">Valider</button>
+		</div>
 			</form>
 		</section>
 		<section>
