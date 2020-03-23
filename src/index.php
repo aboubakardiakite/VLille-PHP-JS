@@ -1,4 +1,5 @@
-<?php require_once("fonctions.php") ?>
+<?php require_once("functionsDisplayItem.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +11,12 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" crossorigin=""></script>
 </head>
 <body>
+    <div class="formulaire">
+        <?php require("formulaire.php") ;?>
+    </div>
     <div id="conteneur">
         <pre>
-        <div id="listestations">
+        <div id="listestations" >
             <?php echo displayStationsList();?>
         </div>
         </pre>

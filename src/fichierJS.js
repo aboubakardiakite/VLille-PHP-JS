@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
   }
 
   if(pointsList.length>0){
-    maCarte.fitBounds(pointsList);
+    maCarte.fitBounds(pointsList) ;
   }
 }
 

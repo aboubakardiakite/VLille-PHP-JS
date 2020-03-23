@@ -1,10 +1,31 @@
 <?php
-
-
+    require_once("functionStationFields.php");
+    require_once("checkForm.php");
+    
+    function selectionUnique(){
+        global $nom;
+        
+		global $commune;
+		$array=getStationsList();
+        $arra=array();
+        
+			for($i=0;$i<count($array);$i++){
+				if(strcasecmp($array[$i]["fields"]["nom"],$nom)==0 || strcasecmp($array[$i]["fields"]["commune"],$commune)==0){ 
+                    $arra[]=$array[$i];
+                    
+					}
+        }
+        
+			if($arra==[] && !isset($nom) && !isset($commune))
+				return $array;
+		return $arra;  
+	}
     //une function qui affiche la liste des stations selon des condition 
+
    function displayStationsList(){
-        $stations = getStationsList();
-        $ul = "<ul id=\"station\" >";
+        $stations = selectionUnique();
+        $stations = getFields($stations);
+         $ul = "<ul id=\"station\" >";
         foreach($stations as $station){
 
             $li = "<li class=\"fields\"   data-etat=\"".$station["etat"]."\"
@@ -25,5 +46,6 @@
         }
         $ul.= "</ul>";
         return $ul;
-}
+    }
+
 ?>

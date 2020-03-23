@@ -18,4 +18,7 @@
  div#listestations{
  	   float: left;
  }
-
+div#frame{
+	height: 500px;
+	width: 100px;
+}
