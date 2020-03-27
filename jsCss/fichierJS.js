@@ -12,10 +12,12 @@ window.addEventListener('DOMContentLoaded', ()=>{
   
      // ...
   let pointsList=[];
-  for(let item of document.querySelectorAll('#station>li')){
-    let nom = item.textContent;
+  for(let item of document.querySelectorAll('li.fields')){
+    let nbvelodisp = item.dataset.nbvelosdispo;
+    let nbplacelibre = item.dataset.nbplacesdispo;
     let geoloc = JSON.parse(item.dataset.geo);
-    let marker = L.marker(geoloc).addTo(maCarte).bindPopup(nom);
+    let image =  VliveImage.getInstance(nbvelodisp,nbplacelibre);
+    let marker =  L.marker( geoloc, {icon:image.getLeafletIcon()} ).addTo(maCarte).bindPopup('<strong>'+item.dataset.nom+'</strong>');
     pointsList.push(geoloc);
     setupListeners(item,marker);
 
@@ -51,6 +53,8 @@ function setupListeners(item,marker){
     
   }
 }
+
+
 
 
 

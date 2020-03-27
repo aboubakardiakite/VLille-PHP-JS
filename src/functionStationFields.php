@@ -6,6 +6,7 @@
             $data=compareParCommune($data);
             return $data;
         }
+        $array=getStationsList();
         function getFields($data){
                 $stations = array(); 
                 for($i=0;$i<count($data);$i++){
@@ -28,4 +29,67 @@
             return ($array);
         }
 
+        
+        function verifieVeloDispo($nombre){
+            $array=getStationsList();
+            $test=FALSE;
+            for($i=0;$i<count($array);$i++){
+                if($nombre<=$array[$i]["fields"]["nbvelosdispo"]){
+                    $test=TRUE;
+                }
+            }
+            
+            return $test;
+        }
+
+        function verifieVelolibre($nombre){
+            global $array;
+            $test=FALSE;
+            for($i=0;$i<count($array);$i++){
+                if($nombre<=$array[$i]["fields"]["nbplacesdispo"]){
+                    $test=TRUE;
+                }
+            }
+            return $test;
+        }
+
+
+        function getNom(){
+            $stations=getStationsList();
+            $stations=getFields($stations);
+            $noms=array();
+            for($i=0;$i<count($stations);$i++){
+                            $noms[]=$stations[$i]["nom"];
+                            
+                        }
+            
+            return $noms;
+        }
+
+        function getEtat(){
+            $stations=getStationsList();
+            $stations=getFields($stations);
+            $noms=array();
+            for($i=0;$i<count($stations);$i++){
+                            $noms[]=$stations[$i]["etat"];
+                            
+                        }
+            
+            return $noms;
+        }
+
+    
+
+     //je recupere la commune des stations avec cette fonction
+     function getCommune(){
+        $stations=getStationsList();
+        $stations=getFields($stations);
+        $commune=array();
+        $j=0;
+        for($i=0;$i<count($stations);$i++){
+                        $commune[]=$stations[$i]["commune"];
+                    }
+        $commune=array_unique($commune);
+        return $commune;
+    }
 ?>
