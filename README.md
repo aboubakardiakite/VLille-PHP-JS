@@ -1,8 +1,8 @@
 # ProjetTW2
 LE PROJET TW2
 Nom Binome:
-Diakite aboubakar siriki
-Itir avave
+*Diakite aboubakar siriki &&*
+*Itir avave*
 
 I)Presentation du projet
 Ce projet consistait à cronstruire un site permettant de rechercher des stations de vélo dans une ville et d'afficher par la suite leur caracteristique et la disponibilité des vélos et des places libres
