@@ -4,11 +4,11 @@ Nom Binome:
 *Diakite aboubakar siriki &&*
 *Itir avave*
 
-    I)Presentation du projet
-    Ce projet consistait à cronstruire un site permettant de rechercher des stations de vélo dans une ville et d'afficher par la suite leur       caracteristique et la disponibilité des vélos et des places libres
+I)Presentation du projet
+Ce projet consistait à cronstruire un site permettant de rechercher des stations de vélo dans une ville et d'afficher par la suite leur       caracteristique et la disponibilité des vélos et des places libres
 
-    II)Les differents dossiers de mon Projet
-    Il y'a 4 dossiers dans mon projet et deux fichier en dehors des dossiers nous avons:
+II)Les differents dossiers de mon Projet
+Il y'a 4 dossiers dans mon projet et deux fichier en dehors des dossiers nous avons:
 
     -Le dossier image qui contient une seul image celle des icones sur dans la table qui est cliquable et lorsqu'on clique elle nous redirige vers la carte en affichant le nom de la station ainsi que ces carateristique  ce dossier n'est pas accessible à l'utilisateur grace à .htaccess
 
@@ -18,7 +18,7 @@ Nom Binome:
 
     -Le dossier views contient l'ensemble mes page qui ont ete generer grace au php et aussi ma carte generer par le js ce dossier n'est pas accessible a l'utilisateur grace a .htaccess
 
-
+## EXECUTER CE PROJET
     Pour executer ce projet vous devez vous placer dans ProjetTW2 et lancer dans un navigateur et le vpn de l'universiter de lille activer le fichier index.php
 
     Apres recherche ce fichier peut renvoyer une page sans carte si la requete n'est pas correcte ou un page avec une carte contenant les station de velo avec ces caracteristique ainsi q'un tableau montrant les caracteristique de cette stations.
